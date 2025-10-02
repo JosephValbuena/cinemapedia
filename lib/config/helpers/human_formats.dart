@@ -9,4 +9,12 @@ class HumanFormats {
 
     return formatterNumber;
   }
+
+  static String average(double number, [int decimals = 0]) {
+    final formatterNumber =
+        NumberFormat.compactCurrency(decimalDigits: decimals, symbol: '', locale: 'en')
+            .format(number);
+
+    return formatterNumber;
+  }
 }
